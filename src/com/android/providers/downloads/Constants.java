@@ -57,6 +57,15 @@ public class Constants {
     /** the intent that gets sent when deleting the notification of a completed download */
     public static final String ACTION_HIDE = "android.intent.action.DOWNLOAD_HIDE";
 
+    /** the intent that gets sent when manually resuming a manually paused download queue */
+    public static final String ACTION_RESUME_QUEUE = "android.intent.action.DOWNLOAD_RESUME_QUEUE";
+
+    /** the intent that gets sent when manually resuming a manually paused download */
+    public static final String ACTION_RESUME = "android.intent.action.DOWNLOAD_RESUME";
+
+    /** the intent that gets sent when manually pausing a running download */
+    public static final String ACTION_PAUSE = "android.intent.action.DOWNLOAD_PAUSE";
+
     /** The default base name for downloaded files if we can't get one at the HTTP level */
     public static final String DEFAULT_DL_FILENAME = "downloadfile";
 
@@ -157,7 +166,7 @@ public class Constants {
     /**
      * The maximum number of redirects.
      */
-    public static final int MAX_REDIRECTS = 5; // can't be more than 7.
+    public static final int MAX_REDIRECTS = 20; // most recent browsers also default to 20
 
     /**
      * The time between a failure and the first retry after an IOException.
